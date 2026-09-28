@@ -85,6 +85,7 @@ namespace Topic4Assignment
             Console.ReadLine();
             Part1();
             Part2();
+            Part3();
         }
 
         public static void Part1()
@@ -152,6 +153,74 @@ namespace Topic4Assignment
             Console.WriteLine("You Have Three Minutes To Live");
             Console.WriteLine("Have A           Day");
         }
+
+        public static void Part3()
+        {
+            string name;
+            double age;
+
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("From the top. What is your name?");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            name = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("" + name + ", wonderful.");
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("And your age?");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            double.TryParse(Console.ReadLine(), out age);
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("In five years, you'd be " + (age + 5) + ". And five years before, you were " + (age - 5) + ".");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.ReadLine();
+
+            double numberOne, numberTwo, numberThree;
+
+
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("Beep; Boop. Give me a number.");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            double.TryParse(Console.ReadLine(), out numberOne);
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("Beep. Boop; I said give me a number.");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            double.TryParse(Console.ReadLine(), out numberTwo);
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("Beep, Boop; I SAID give me a NUMBER");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            double.TryParse(Console.ReadLine(), out numberThree);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("The machine regurgitates. " + (numberOne + numberTwo + numberThree / 2) + ".");
+        }
+        public static void Part4()
+        {
+            string itemOne, itemTwo;
+            double priceOne, priceTwo;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("A beckoning. An item's name:");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            itemOne = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("A beckoning. Another item's name:");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            itemTwo = Console.ReadLine();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Yet a price:");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            double.TryParse(Console.ReadLine(), out priceOne);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Yet another price:");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            double.TryParse(Console.ReadLine(), out priceTwo);
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("There is no enscryption.");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.Write("Buy " + itemOne + " & " + itemTwo + " Together For Only " + (priceOne + priceTwo) + "!");
+
+        }
+
     }
-    }   
+    }
+}
+       
 
