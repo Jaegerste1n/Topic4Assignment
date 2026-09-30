@@ -196,6 +196,7 @@ namespace Topic4Assignment
         {
             string itemOne, itemTwo;
             double priceOne, priceTwo;
+           
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("A beckoning. An item's name:");
             Console.ForegroundColor = ConsoleColor.DarkGray;
@@ -213,10 +214,28 @@ namespace Topic4Assignment
             Console.ForegroundColor = ConsoleColor.DarkGray;
             double.TryParse(Console.ReadLine(), out priceTwo);
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("There is no enscryption.");
+            double both = priceOne + priceTwo;
+            Console.WriteLine("There is no enscryption. ");
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.Write("Buy " + itemOne + " & " + itemTwo + " Together For Only " + (priceOne + priceTwo) + "!");
-
+            Console.Write("Buy " + itemOne + " & " + itemTwo + " Together For Only " + (priceOne.ToString("C") + priceTwo.ToString("C")) + "!, And With 20% Off That's $" + both * 0.8 + "!");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("And yet ");
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            double tax = both * 0.13;
+            double final = both * 0.8 + tax;
+            double discount = both * 0.2;
+            Console.Write("But Taxes Would Be " + tax.ToString("C") + " So It Would Actually Be " + final.ToString("C") + "");
+            Console.WriteLine("Receipt");
+            Console.WriteLine("Item 1: " + itemOne + "");
+            Console.WriteLine("Price: " + priceOne.ToString("C") + "");
+            Console.WriteLine("Item 2: " + itemTwo + "");
+            Console.WriteLine("Price: " + priceTwo.ToString("C") + "");
+            Console.WriteLine("=================");
+            Console.WriteLine("Total: " + final.ToString("C") + "");
+            Console.WriteLine("Discount: " + discount.ToString("C") + "");
+            Console.WriteLine("Tax: " + tax.ToString("C") + "");
+            Console.WriteLine("=================");
+            Console.WriteLine("Total Owed: " + final.ToString("C") + "");
         }
 
     }
