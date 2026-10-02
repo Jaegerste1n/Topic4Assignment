@@ -225,6 +225,7 @@ namespace Topic4Assignment
             double tax = both * 0.13;
             double final = both * 0.8 + tax;
             double discount = both * 0.2;
+            double subTotal = both * 0.8;
             double noDis = both + tax;
             Console.Write("But Taxes Would Be " + tax.ToString("C") + " So It Would Actually Be " + final.ToString("C") + "");
             Console.WriteLine("");
@@ -235,8 +236,9 @@ namespace Topic4Assignment
             Console.WriteLine("Item 2: " + itemTwo + "");
             Console.WriteLine("Price: " + priceTwo.ToString("C") + "");
             Console.WriteLine("=================");
-            Console.WriteLine("Total: " + noDis.ToString("C") + "");
+            Console.WriteLine("Total: " + both.ToString("C") + "");
             Console.WriteLine("Discount: " + discount.ToString("C") + "");
+            Console.WriteLine("Subtotal: " + subTotal.ToString("C") + "");
             Console.WriteLine("Tax: " + tax.ToString("C") + "");
             Console.WriteLine("=================");
             Console.WriteLine("Total Owed: " + final.ToString("C") + "");
